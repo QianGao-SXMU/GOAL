@@ -1,0 +1,18 @@
+Package: GOAL
+Type: Package
+Title: Genelized outcome-adaptive LASSO 
+Version: 0.1.0
+Author: Qian Gao
+Maintainer: Qian Gao <gaoqian1206@163.com>
+Description: estimating causal dose-response curve when the number of covariates is large.Please find more details in the paper "High-dimensional generalized proprnsity score with application to omics data. Briefings in Bioinformatics,2021"
+License: What license is it under?
+Encoding: UTF-8
+LazyData: false
+Imports: 
+    CBPS,
+    lqa,
+    MASS,
+    Matrix,
+    survey,
+    wCorr
+RoxygenNote: 7.2.3
