@@ -15,4 +15,11 @@ Imports:
     Matrix,
     survey,
     wCorr
+Depends: 
+    CBPS,
+    lqa,
+    MASS,
+    Matrix,
+    survey,
+    wCorr
 RoxygenNote: 7.2.3
