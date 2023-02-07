@@ -1,5 +1,5 @@
 # GOAL: Generalized Outcome Adaptive LASSO  
-Implements the generalized outcome-adaptive LASSO (GOAL) proposed by Qian Gao et al. (2021). The GOAL was designed for the unbiased estimation of the dose-response function (DRF) from high-dimensional observation data. Confounders and predictors of outcome are selected by minimizing dual-weight coefficient (DWC), which considered covariates balance. Simultaneously, the balace weights are estimated and applied to estimate DRF using Inverse Probability Weighting (IPW) method.  
+Implementation of the generalized outcome-adaptive LASSO (GOAL) proposed by Qian Gao et al. (2021). The GOAL was designed for the unbiased estimation of the dose-response function (DRF) from high-dimensional observation data. Confounders and outcome predictors are selected by minimizing dual-weight coefficient (DWC) considereing covariates balance. Simultaneously, the balance weights are estimated and applied to estimate DRF using Inverse Probability Weighting (IPW) method.  
 ## Installation  
 library(devtools)  
 install_local(“/path/to/lqa_1.0-3.tar.gz”)  
@@ -25,8 +25,5 @@ TrueVar<-as.matrix(Data[,c(1:6)])
 Data$Trt<-TrueVar%*%betaTrt+rnorm(n=n,mean=0,sd=1)  
 Data$Y<-Beta*Data$Trt+TrueVar%*%betaOut+rnorm(n=n,mean=0,sd=1)   
 ### GOAL
-library(lqa)  
-library(CBPS)  
-library(wCorr)  
-library(survey)  
+library(GOAL) 
 GOAL(data=Data,var.list=var.list,Trt="Trt",out="Y")
