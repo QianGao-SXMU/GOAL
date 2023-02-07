@@ -13,8 +13,6 @@
 #'
 #' @examples
 GOAL<-function (data,var.list,covar=NULL,Trt="Trt",out="Y",lambda_vec=c( -10, -5, -2, -1, -0.75, -0.5, -0.25, 0.25, 0.49),gamma_convergence=2) {
-  library(CBPS)
-  library(lqa)
   Data<-data
   n<-dim(Data)[1]
   #??׼??
