@@ -25,5 +25,5 @@ TrueVar<-as.matrix(Data[,c(1:6)])
 Data$Trt<-TrueVar%*%betaTrt+rnorm(n=n,mean=0,sd=1)  
 Data$Y<-Beta*Data$Trt+TrueVar%*%betaOut+rnorm(n=n,mean=0,sd=1)   
 ### GOAL
-library(GOAL) 
+library(GOAL)  
 GOAL(data=Data,var.list=var.list,Trt="Trt",out="Y")
