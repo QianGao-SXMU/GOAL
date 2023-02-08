@@ -3,7 +3,7 @@ Implementation of the generalized outcome-adaptive LASSO (GOAL) proposed by Qian
 ## Installation  
 library(devtools)  
 install_local(“/path/to/lqa_1.0-3.tar.gz”)  
-install_github("qg2023/GOAL")  
+install_github("QianGao-SXMU/GOAL")  
 ## Example  
 ### Simulation Data  
 n<-200  
