@@ -13,7 +13,7 @@ sig_x <- 1
 rho <- 0  
 Beta<-0  
 var.list<-paste("X",1:p,sep="")  
-Sigma <- matrix(rho*sig_x^2,nrow=length(var.list),ncol=length(var.list))   
+Sigma <- matrix(rho\*sig_x^2,nrow=length(var.list),ncol=length(var.list))   
 diag(Sigma) <- sig_x^2  
 Mean_x <- rep(mean_x,p)  
 set.seed(123)  
@@ -22,8 +22,8 @@ colnames(Data)<-var.list
 betaOut<-c(1,1,1,1,0,0)  
 betaTrt<-c(1,1,0,0,1,1)  
 TrueVar<-as.matrix(Data[,c(1:6)])  
-Data$Trt<-TrueVar%*%betaTrt+rnorm(n=n,mean=0,sd=1)  
-Data$Y<-Beta*Data$Trt+TrueVar%*%betaOut+rnorm(n=n,mean=0,sd=1)   
+Data$Trt<-TrueVar%\*%betaTrt+rnorm(n=n,mean=0,sd=1)  
+Data$Y<-Beta\*Data$Trt+TrueVar%\*%betaOut+rnorm(n=n,mean=0,sd=1)   
 ### GOAL
 library(GOAL)  
 GOAL(data=Data,var.list=var.list,Trt="Trt",out="Y")
